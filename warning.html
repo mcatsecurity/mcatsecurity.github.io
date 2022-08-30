@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCAT Security</title>
+</head>
+<body>
+    <style>
+        @keyframes fadeIn {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        @keyframes fadeOut {
+            0%{
+                opacity: 1;
+            }
+            75%{
+                opacity: 0.9;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        @keyframes moveInDown {
+            from{
+                transform: translateY(-40em);
+            }
+            to{
+                transform: translateY(0em);
+            }
+        }
+        @keyframes moveInUp {
+            from{
+                transform: translateY(40em);
+            }
+            to{
+                transform: translateY(0em);
+            }
+        }
+        @keyframes moveInLeft {
+            from{
+                transform: translate(40em);
+            }
+            to{
+                transform: translate(0em);
+            }
+        }
+        @keyframes moveInRight {
+            from{
+                transform: translate(-40em);
+            }
+            to{
+                transform: translate(0em);
+            }
+        }
+        
+        /*Fin de animaciones*/
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            animation-name: fadeIn;
+            animation-duration: 1s;
+            scroll-behavior: smooth;
+        } 
+        html{
+            font-size: 62.5%;
+        }
+        body{
+            overflow-x: hidden;
+            overflow-y: scroll;
+            font-family: 'Montserrat', sans-serif;
+            background-color: transparent;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        :root{
+            --colorPrimario: #383838;
+            --colorPrimarioT: rgba(56, 56, 56, 0.9);
+        
+            --colorEnPrimario: #bcbcbc;
+            --colorEnPrimarioT: rgba(188, 188, 188, 0.9);
+            
+            --colorSecundario: #424443;
+            --colorSecundarioT: rgba(66, 68, 67, 0.9);
+        
+            --blanco: rgb(255, 255, 255);
+        }
+
+        main {
+            background-color: var(--colorPrimario);
+            color: var(--colorEnPrimario);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 90vw;
+            height: 90vh;
+            margin: 0 auto;
+            animation: moveInUp 1.5s;
+        }
+        main * {
+            margin: 2rem auto;
+            color: var(--colorEnPrimario);
+            max-width: 60%;
+            transition: all 0.5s;
+        }
+        main img {
+            width: 10%;
+        }
+        main h1 {
+            font-size: 3rem;
+        }
+        main p {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        main p a:hover {
+            color: var(--colorEnPrimarioT);
+            font-size: 1.7rem;
+        }
+        
+        /*Media queries*/
+        
+        @media (hover: none) {
+            header {
+              opacity: 1;
+            }
+          }
+        @media (max-width: 2100px) {
+            html{
+                font-size: 112.5%;
+            }
+        }
+        @media (max-width: 2000px) {
+            html{
+                font-size: 106.25%;
+            }
+        }
+        @media (max-width: 1900px) {
+            html{
+                font-size: 100%;
+            }
+        }
+        @media (max-width: 1800px) {
+            html{
+                font-size: 93.75%;
+            }
+        }
+        @media (max-width: 1700px) {
+            html{
+                font-size: 87.5%;
+            }
+        }
+        @media (max-width: 1600px) {
+            html{
+                font-size: 81.25%;
+            }
+        }
+        @media (max-width: 1500px) {
+            html{
+                font-size: 75%;
+            }
+        }
+        @media (max-width: 1400px) {
+            html{
+                font-size: 68.75%;
+            }
+        }
+        @media (max-width: 1200px) {
+            html{
+                font-size: 56.25%;
+            }
+        }
+        @media (max-width: 1100px) {
+            html{
+                font-size: 50%;
+            }
+        }
+        @media (max-width: 1000px) {
+            html{
+                font-size: 43.75%;
+            }
+        }
+        @media (max-width: 900px) {
+            html{
+                font-size: 37.5%;
+            }
+        }
+        @media (max-width: 800px) {
+            html{
+                font-size: 31.25%;
+            }
+        }
+        @media (max-width: 700px) {
+            html{
+                font-size: 25%;
+            }
+        }
+    </style>
+
+    <main>
+        <img src="./res/index/warning_icon.svg" alt="">
+        <h1>¡Atención!</h1>
+        <p>Este sitio web era peligroso, así que te pusimos a salvo bloqueando el acceso. Aún así, puedes volver al sitio bajo tu propio riesgo haciendo click <a href="javascript:history.back()">aquí</a></p>
+    </main>
+</body>
+</html>
