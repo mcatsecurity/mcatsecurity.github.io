@@ -5,3 +5,4 @@ function showSecond() {
     second.style.display = "block"
     first.style.display = "none"
 }
+ 

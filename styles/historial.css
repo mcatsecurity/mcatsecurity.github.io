@@ -70,9 +70,6 @@ body{
     background-color: transparent;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 html, body {
     margin: 0;
@@ -84,8 +81,8 @@ html, body {
     --colorPrimario: #383838;
     --colorPrimarioT: rgba(56, 56, 56, 0.9);
 
-    --colorEnPrimario: #bcbcbc;
-    --colorEnPrimarioT: rgba(188, 188, 188, 0.9);
+    --colorEnPrimario: #FFFFFF;
+    --colorEnPrimarioT: rgba(232, 232, 232, 0.3);
     
     --colorSecundario: #424443;
     --colorSecundarioT: rgba(66, 68, 67, 0.9);
@@ -95,143 +92,98 @@ html, body {
 
 /*Fin de estilos generales*/
 
-main {
-    width: 80vw;
-    height: 80vh;
-    background-color: var(--colorPrimario);
-    color: var(--colorEnPrimario);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    border: 2px solid var(--colorEnPrimario);
-}
-.left {
+header {
+    width: 100vw;
+    height: 10vh;
     background-color: var(--colorSecundario);
-    color: var(--colorEnPrimario);
-    display: flex; 
+}
+.top-bar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.top-bar * {
+    max-height: 90%;
+    margin: 0 1rem;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.left * {
-    margin: 1rem auto;
-    max-width: 90%;
-    text-align: center;
-}
-.left img {
-    width: 50%;
-}
-.left h1 {
-    font-size: 1.5rem;
-}
-.left p {
-    font-size: 1.1rem;
+    color: var(--colorEnPrimario);
 }
 
-.right {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/*Estilos de main*/
+
+main {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
     background-color: var(--colorPrimario);
-}
-.right * {
     margin: 0 auto;
 }
-.first {
-    width: 100%;
-    height: 100%;
-    background-color: var(--colorPrimario);
+.history {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: all 0.5s;
-    font-size: 1.2rem;
-}
-.first:hover {
-    cursor: pointer;
-    font-size: 1.5rem;
-}
-.first * {
     margin: 1rem auto;
+    width: 100vw;
 }
-.second {
-    display: none;
-    width: 100%;
-    height: 100%;
-}
-.second-top {
-    width: 100%;
-    height: 15%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-bottom: 2px solid var(--colorEnPrimarioT);
-}
-.second-top * {
-    margin: 0.5rem auto;
-    min-height: 80%;
-    max-height: 85%;
-    transition: all 0.5s;
-}
-.second-top *:hover {
-    min-height: 85%;
-    max-height: 90%;
-}
-.second-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    height: 85%;
-    gap: 1rem;
-}
-.option {
-    width: 95%;
-    height: 95%;
+.widget {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 80vw;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: var(--colorSecundario);
+    border-radius: 5%;
 }
-.option:hover {
-    border: 1px solid var(--colorEnPrimario);
-}
-.option * {
-    margin: 0.5rem auto;
-    text-align: center;
+.wtop {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    border: 1px solid var(--colorEnPrimarioT);
     color: var(--colorEnPrimario);
+    margin: 1rem;
 }
-.option .example-link {
+.wmain {
+    margin: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.link {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
     transition: all 0.5s;
 }
-.option .example-link:hover {
-    font-size: 1.2rem;
-    color: white;
-}
-.option input {
-    min-width: 2rem;
-    min-height: 2rem;
-    transition: all 0.5s;
-}
-.option input:hover {
-    cursor: pointer;
-    padding: 0.5rem;
-    min-width: 2.3rem;
-    min-height: 2.3rem;
-}
-.big {
-    grid-row: 1 / span 2;
-}
-#history-btn {
-    color: var(--colorPrimario);
-    background-color: var(--colorEnPrimario);
-    padding: 1.2rem;
-    text-decoration: none;
+.link * {
+    margin: 0.5rem 2rem;
+    color: var(--colorEnPrimario);
     font-size: 1.2rem;
     transition: all 0.5s;
 }
-#history-btn:hover {
+.link input {
     cursor: pointer;
-    padding: 1.4rem;
-    font-size: 1.4rem;
+    margin: 0.5rem 0;
+    width: 1.5rem;
+    transition: all 0.5s;
+}
+.link input:hover {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+.link img {
+    width: 1rem;
+}
+.link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    text-decoration-color: var(--colorEnPrimario);
+    margin-left: 1rem;
 }
 
 /*Media queries*/
@@ -311,4 +263,3 @@ main {
         font-size: 25%;
     }
 }
-
